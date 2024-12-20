@@ -49,6 +49,8 @@ namespace BrandonChong_FinalTest
 
         public ICommand LoadPostsCommand { get; }
         public ICommand AddPostCommand { get; }
+        public ICommand DeletePostCommand { get; }
+
 
         public PostViewModel()
         {
@@ -57,6 +59,7 @@ namespace BrandonChong_FinalTest
 
             LoadPostsCommand = new Command(async () => await LoadPosts());
             AddPostCommand = new Command(async () => await AddPost());
+            DeletePostCommand = new Command<PostRecord>(async (post) => await DeletePost(post));
         }
 
         private async Task LoadPosts()
@@ -100,5 +103,18 @@ namespace BrandonChong_FinalTest
                 BodyInput = string.Empty;
             }
         }
+        private async Task DeletePost(PostRecord post)
+        {
+            var result = await Application.Current.MainPage.DisplayAlert("Confirm", "Are you sure you want to delete this post?", "Yes", "No");
+            if (result)
+            {
+                var success = await _postService.DeletePostAsync(post.Id); // Assuming you have a method to delete the post by ID
+                if (success)
+                {
+                    Posts.Remove(post); // Remove post from the list
+                }
+            }
+        }
+
     }
 }
