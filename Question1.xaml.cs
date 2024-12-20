@@ -1,6 +1,6 @@
 using Microsoft.Maui.Controls;
 
-namespace MauiApp3
+namespace BrandonChong_FinalTest
 {
     public partial class Question1 : ContentPage
     {

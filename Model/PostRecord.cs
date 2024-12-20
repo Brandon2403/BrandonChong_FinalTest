@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace MauiApp3.Model
+namespace BrandonChong_FinalTest.Model
 {
     public class PostRecord
     {

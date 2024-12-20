@@ -1,4 +1,4 @@
-﻿namespace MauiApp3
+﻿namespace BrandonChong_FinalTest
 {
     public partial class App : Application
     {

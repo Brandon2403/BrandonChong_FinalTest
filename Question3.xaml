@@ -1,7 +1,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MauiApp3"
-             x:Class="MauiApp3.Question3"
+             xmlns:local="clr-namespace:BrandonChong_FinalTest"
+             x:Class="BrandonChong_FinalTest.Question3"
              Title="Question3">
     <ContentPage.BindingContext>
         <local:PostViewModel />

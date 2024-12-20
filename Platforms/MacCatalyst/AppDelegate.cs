@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace MauiApp3
+namespace BrandonChong_FinalTest
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

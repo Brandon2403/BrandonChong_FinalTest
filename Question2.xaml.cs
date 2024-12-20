@@ -1,5 +1,5 @@
-using MauiApp3.ViewModel;
-namespace MauiApp3;
+using BrandonChong_FinalTest.ViewModel;
+namespace BrandonChong_FinalTest;
 
 public partial class Question2 : ContentPage
 {

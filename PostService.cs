@@ -1,7 +1,7 @@
 ﻿using System.Net.Http.Json;
-using MauiApp3.Model;
+using BrandonChong_FinalTest.Model;
 
-namespace MauiApp3
+namespace BrandonChong_FinalTest
 {
     public class PostService
     {

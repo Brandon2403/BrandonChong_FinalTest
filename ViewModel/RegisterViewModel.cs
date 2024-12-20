@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Input;
 
 
-namespace MauiApp3.ViewModel
+namespace BrandonChong_FinalTest.ViewModel
 {
     public class RegisterViewModel : INotifyPropertyChanged
     {

@@ -2,7 +2,7 @@
 using System.Globalization;
 using Microsoft.Maui.Graphics;
 
-namespace MauiApp3
+namespace BrandonChong_FinalTest
 {
     public class SliderValueToColorConverter : IValueConverter
     {

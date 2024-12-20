@@ -4,9 +4,9 @@ using System.Windows.Input;
 using Newtonsoft.Json;
 using System.Linq;
 using System.ComponentModel;
-using MauiApp3.Model;
+using BrandonChong_FinalTest.Model;
 
-namespace MauiApp3
+namespace BrandonChong_FinalTest
 {
     public class PostViewModel : BindableObject
     {

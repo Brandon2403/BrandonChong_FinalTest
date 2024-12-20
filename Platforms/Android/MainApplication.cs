@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MauiApp3
+namespace BrandonChong_FinalTest
 {
     [Application]
     public class MainApplication : MauiApplication
