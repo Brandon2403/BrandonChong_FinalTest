@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp3"
+             x:Class="MauiApp3.Question1"
+             Title="Question1">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Converters -->
+            <local:SliderValueToTextConverter x:Key="SliderValueToTextConverter" />
+            <local:SliderValueToColorConverter x:Key="SliderValueToColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout>
+        <StackLayout>
+            <Grid VerticalOptions="CenterAndExpand" 
+                  RowDefinitions="*,*"
+                  ColumnDefinitions="auto,*" 
+                  Margin="20">
+
+                <!-- Label to display slider value -->
+                <Label Grid.Row="0" 
+                       Grid.Column="0" 
+                       HorizontalOptions="CenterAndExpand"
+                       Text="{Binding Source={x:Reference slider1}, Path=Value, StringFormat='{0:0}'}" />
+
+                <!-- Slider with range and custom bar colors -->
+                <Slider x:Name="slider1" Grid.Row="0" 
+                        Grid.Column="1" 
+                        Minimum="0" Maximum="100" 
+                        HorizontalOptions="FillAndExpand" />
+
+                <!-- Label with dynamic text and color -->
+                <Label Grid.Row="1" 
+                       Grid.ColumnSpan="2" 
+                       HorizontalOptions="CenterAndExpand"
+                       Text="{Binding Source={x:Reference slider1}, Path=Value, Converter={StaticResource SliderValueToTextConverter}}"
+                       TextColor="{Binding Source={x:Reference slider1}, Path=Value, Converter={StaticResource SliderValueToColorConverter}}" />
+            </Grid>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

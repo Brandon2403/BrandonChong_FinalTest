@@ -1,0 +1,54 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp3"
+             x:Class="MauiApp3.Question3"
+             Title="Question3">
+    <ContentPage.BindingContext>
+        <local:PostViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="ADD" Clicked="OnAddClicked" />
+    </ContentPage.ToolbarItems>
+
+    <VerticalStackLayout>
+        <Grid Padding="10">
+            <CollectionView ItemsSource="{Binding Posts}" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="15"
+                           Margin="10"
+                           CornerRadius="10"
+                           BorderColor="LightGray"
+                           BackgroundColor="White">
+                            <StackLayout>
+                                <Label Text="{Binding Title}"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       TextColor="Black"
+                                       LineBreakMode="TailTruncation" />
+
+                                <Label Text="{Binding Body}"
+                                       FontSize="14"
+                                       TextColor="Gray"
+                                       LineBreakMode="TailTruncation" />
+
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="End" Spacing="10" Margin="0,10,0,0">
+               
+
+                                    <Button Text="Delete"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type local:PostViewModel}}, Path=DeletePostCommand}"
+                                        CommandParameter="{Binding .}"
+                                        BackgroundColor="#F44336"
+                                        TextColor="White"
+                                        CornerRadius="10"
+                                        FontSize="12" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

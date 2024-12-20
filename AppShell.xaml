@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp3.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp3"
+    Shell.FlyoutBehavior="Flyout"
+    Title="MauiApp3">
+
+    <ShellContent
+        Title="Question 1"
+        ContentTemplate="{DataTemplate local:Question1}"
+        Route="Question1" />
+    
+    <ShellContent
+        Title="Question 2"
+        ContentTemplate="{DataTemplate local:Question2}"
+        Route="Question2" />
+
+    <ShellContent
+        Title="Question 3"
+        ContentTemplate="{DataTemplate local:Question3}"
+        Route="Question3" />
+</Shell>

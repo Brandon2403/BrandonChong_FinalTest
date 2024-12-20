@@ -1,0 +1,16 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp3"
+             x:Class="MauiApp3.AddPostPage"
+             Title="Add New Post">
+    <ContentPage.BindingContext>
+        <local:PostViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Entry Placeholder="Enter Title" Text="{Binding TitleInput}" />
+        <Entry Placeholder="Enter Body" Text="{Binding BodyInput}" />
+        <Button Text="Save" Command="{Binding AddPostCommand}" CommandParameter="{Binding .}" />
+        <Button Text="Cancel" Clicked="OnCancelClicked" />
+    </VerticalStackLayout>
+</ContentPage>
